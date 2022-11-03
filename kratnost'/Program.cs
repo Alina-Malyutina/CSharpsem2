@@ -4,12 +4,19 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter srcond number: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 int ostatok = 0;
-if (num1 % num2 == 0)
+if(num1 >= num2)
 {
-    Console.WriteLine($"{num1} is multyple {num2}");
+    if (num1 % num2 == 0)
+    {
+        Console.WriteLine($"{num1} is multyple {num2}");
+    }
+    else 
+    {
+        ostatok = num1 % num2;
+        Console.WriteLine($"{num1} is not multyple {num2}. Remainder of division is {ostatok}");
+    }
 }
-else 
+else
 {
-    ostatok = num1 % num2;
-    Console.WriteLine($"{num1} is not multyple {num2}. Remainder of division is {ostatok}");
+    Console.WriteLine("Please, enter number like number 1 > number 2");
 }
